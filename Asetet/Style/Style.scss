@@ -10,6 +10,8 @@ a {
     color: #000000;
 }
 
+
+
 li {
     list-style: none;
 }
@@ -22,6 +24,7 @@ button {
 
     a {
         color: var(--main-color);
+
     }
 }
 
@@ -67,7 +70,13 @@ p {
 
 // Header //
 header {
+    animation: introload-header 2s ease;
     background-color: var(--main-bg-color);
+
+    .header-animation {
+        animation: header-animation 4.5s forwards;
+
+    }
 
     .logo {
         text-align: center;
@@ -77,8 +86,13 @@ header {
         display: flex;
         justify-content: space-around;
         align-items: center;
-        // gap: 3.5rem;
         padding: 2rem 0;
+
+        a:hover {
+            border-bottom: 3px solid black;
+            color: #000000;
+            transition: all 0.2s ease;
+        }
     }
 
     button {
@@ -95,9 +109,14 @@ header {
 
 // Main //
 main {
+    animation: introload-main 2s forwards;
     height: 100vh;
     background-color: var(--main-bg-color);
     text-align: center;
+
+    .main-animation {
+        animation: main-animation 2.2s ease-in;
+    }
 
     .main-img {
         max-width: 100%;
@@ -120,6 +139,10 @@ main {
 // --- //
 // Section 1 //
 .section-1 {
+
+    .section1-animation {
+        animation: main-animation 2.2s ease-in;
+    }
 
     .box {
         display: flex;
@@ -171,6 +194,10 @@ main {
 .section-2 {
     text-align: center;
 
+    .section2-animation {
+        animation: main-animation 2.2s ease-in;
+    }
+
     h1 {
         font-size: 2rem;
         margin-bottom: 2rem;
@@ -192,6 +219,11 @@ main {
 // Section 3 //
 
 .section-3 {
+
+    .section3-animation {
+        animation: main-animation 2.2s ease-in;
+    }
+
     .section1-img {
         width: 100%;
         height: auto;
@@ -202,6 +234,7 @@ main {
 
 // Footer //
 footer {
+    animation: introload-header 4s forwards;
     background-color: var(--main-bg-color);
     text-align: center;
     padding: 2rem;
@@ -291,6 +324,7 @@ footer {
         }
     }
 }
+
 // End of media 650px //
 
 // Media from 650 to 1000px //
@@ -373,3 +407,46 @@ footer {
 }
 
 // End of media 650px to 1000px //
+
+// @keyframes  Animation//
+
+@keyframes introload-main {
+    from {
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    to {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+}
+
+@keyframes introload-header {
+    from {
+        clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+    }
+
+    to {
+        clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);
+    }
+}
+
+
+@keyframes header-animation {
+    from {
+        clip-path: circle(0% at 0 100%);
+    }
+
+    to {
+        clip-path: circle(141.2% at 0 100%);
+    }
+}
+
+@keyframes main-animation {
+    from {
+        clip-path: circle(0% at 0 100%);
+    }
+
+    to {
+        clip-path: circle(141.2% at 0 100%);
+    }
+}

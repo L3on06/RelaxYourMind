@@ -58,7 +58,13 @@ p {
 }
 
 header {
+  -webkit-animation: introload-header 2s ease;
+          animation: introload-header 2s ease;
   background-color: var(--main-bg-color);
+}
+header .header-animation {
+  -webkit-animation: header-animation 4.5s forwards;
+          animation: header-animation 4.5s forwards;
 }
 header .logo {
   text-align: center;
@@ -69,6 +75,11 @@ header ul {
   align-items: center;
   padding: 2rem 0;
 }
+header ul a:hover {
+  border-bottom: 3px solid black;
+  color: #000000;
+  transition: all 0.2s ease;
+}
 header button {
   margin: 0 auto;
   display: block;
@@ -78,9 +89,15 @@ header button {
 }
 
 main {
+  -webkit-animation: introload-main 2s forwards;
+          animation: introload-main 2s forwards;
   height: 100vh;
   background-color: var(--main-bg-color);
   text-align: center;
+}
+main .main-animation {
+  -webkit-animation: main-animation 2.2s ease-in;
+          animation: main-animation 2.2s ease-in;
 }
 main .main-img {
   max-width: 100%;
@@ -96,6 +113,10 @@ main .main-button {
   justify-content: center;
 }
 
+.section-1 .section1-animation {
+  -webkit-animation: main-animation 2.2s ease-in;
+          animation: main-animation 2.2s ease-in;
+}
 .section-1 .box {
   display: flex;
   justify-content: center;
@@ -133,6 +154,10 @@ main .main-button {
 .section-2 {
   text-align: center;
 }
+.section-2 .section2-animation {
+  -webkit-animation: main-animation 2.2s ease-in;
+          animation: main-animation 2.2s ease-in;
+}
 .section-2 h1 {
   font-size: 2rem;
   margin-bottom: 2rem;
@@ -145,12 +170,18 @@ main .main-button {
   align-self: center;
 }
 
+.section-3 .section3-animation {
+  -webkit-animation: main-animation 2.2s ease-in;
+          animation: main-animation 2.2s ease-in;
+}
 .section-3 .section1-img {
   width: 100%;
   height: auto;
 }
 
 footer {
+  -webkit-animation: introload-header 4s forwards;
+          animation: introload-header 4s forwards;
   background-color: var(--main-bg-color);
   text-align: center;
   padding: 2rem;
@@ -261,5 +292,85 @@ footer {
     width: 500px;
     font-size: 1.2rem;
     line-height: 2rem;
+  }
+}
+@-webkit-keyframes introload-main {
+  from {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+  to {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+@keyframes introload-main {
+  from {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+  to {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+@-webkit-keyframes introload-header {
+  from {
+    -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+            clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+  }
+  to {
+    -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);
+            clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);
+  }
+}
+@keyframes introload-header {
+  from {
+    -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+            clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+  }
+  to {
+    -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);
+            clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);
+  }
+}
+@-webkit-keyframes header-animation {
+  from {
+    -webkit-clip-path: circle(0% at 0 100%);
+            clip-path: circle(0% at 0 100%);
+  }
+  to {
+    -webkit-clip-path: circle(141.2% at 0 100%);
+            clip-path: circle(141.2% at 0 100%);
+  }
+}
+@keyframes header-animation {
+  from {
+    -webkit-clip-path: circle(0% at 0 100%);
+            clip-path: circle(0% at 0 100%);
+  }
+  to {
+    -webkit-clip-path: circle(141.2% at 0 100%);
+            clip-path: circle(141.2% at 0 100%);
+  }
+}
+@-webkit-keyframes main-animation {
+  from {
+    -webkit-clip-path: circle(0% at 0 100%);
+            clip-path: circle(0% at 0 100%);
+  }
+  to {
+    -webkit-clip-path: circle(141.2% at 0 100%);
+            clip-path: circle(141.2% at 0 100%);
+  }
+}
+@keyframes main-animation {
+  from {
+    -webkit-clip-path: circle(0% at 0 100%);
+            clip-path: circle(0% at 0 100%);
+  }
+  to {
+    -webkit-clip-path: circle(141.2% at 0 100%);
+            clip-path: circle(141.2% at 0 100%);
   }
 }/*# sourceMappingURL=Style.css.map */
